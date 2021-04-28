@@ -1,0 +1,88 @@
+@keyframes lettreA {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: $primary;
+  }
+}
+
+#lettreA {
+  animation: lettreA 1.5s linear forwards 1s;
+}
+
+/* COTE GAUCHE */
+
+@keyframes ligneHautGauche {
+  from {
+    transform: translate(359.5px, 437.5px);
+  }
+  to {
+    transform: translate(359.5px, 487.5px);
+  }
+}
+#ligneHautGauche {
+  animation: ligneHautGauche 1s linear forwards 1s;
+}
+
+@keyframes Gauche {
+  from {
+    transform: translate(32px, -49px);
+  }
+  to {
+    transform: translate(-22px, -49px);
+  }
+}
+#Gauche {
+  animation: Gauche 1s linear forwards;
+}
+
+@keyframes ligneBasGauche {
+  from {
+    transform: translate(359.5px, 437.5px);
+  }
+  to {
+    transform: translate(359.5px, 387.5px);
+  }
+}
+#ligneBasGauche {
+  animation: ligneBasGauche 1s linear forwards 1s;
+}
+
+/* COTE DROIT */
+
+@keyframes ligneHautDroit {
+  from {
+    transform: translate(723.5px, 437.5px);
+  }
+  to {
+    transform: translate(723.5px, 487.5px);
+  }
+}
+#ligneHautDroit {
+  animation: ligneHautDroit 1s linear forwards 1s;
+}
+
+@keyframes Droit {
+  from {
+    transform: translate(32px, -49px);
+  }
+  to {
+    transform: translate(82px, -49px);
+  }
+}
+#Droit {
+  animation: Droit 1s linear forwards;
+}
+
+@keyframes ligneBasDroit {
+  from {
+    transform: translate(723.5px, 437.5px);
+  }
+  to {
+    transform: translate(723.5px, 387.5px);
+  }
+}
+#ligneBasDroit {
+  animation: ligneBasDroit 1s linear forwards 1s;
+}

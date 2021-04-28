@@ -1,0 +1,19 @@
+/*-------------------- FOOTER --------------------*/
+.footer {
+  @extend .c-flex;
+  height: 5rem;
+  text-align: center;
+  span {
+    margin-left: 0.5rem;
+  }
+  &-dark {
+    @extend .footer;
+    background: $primary;
+    color: $secondary;
+  }
+  &-light {
+    @extend .footer;
+    background: $secondary;
+    color: $primary;
+  }
+}

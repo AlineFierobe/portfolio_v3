@@ -1,0 +1,40 @@
+/*-------------------- NORMALIZE --------------------*/
+/*--- MAIN GRID ---*/
+body {
+  min-height: 100vh;
+  background: $secondary;
+  display: grid;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
+  // TEXT
+  font-family: $text;
+  font-weight: 300;
+  color: $primary;
+}
+
+/*--- DEFAULT TITLE ---*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title;
+}
+
+/*--- DEFAULT LINK ---*/
+a {
+  color: $primary;
+}

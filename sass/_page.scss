@@ -1,0 +1,432 @@
+/*-------------------- HOME PAGE --------------------*/
+.home-title {
+  font-size: 10rem;
+  text-transform: uppercase;
+  &-left {
+    @extend .home-title;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  }
+  &-right {
+    @extend .home-title;
+    writing-mode: vertical-rl;
+  }
+  @include mobile {
+    font-size: 7rem;
+    writing-mode: initial;
+    transform: rotate(0deg);
+  }
+}
+.home-box {
+  width: 70%;
+  @include mobile {
+    width: 95%;
+    justify-items: center;
+  }
+}
+/*--- HOME ---*/
+.home {
+  width: 100%;
+  height: calc(100vh - 10rem);
+  @extend .c-flex;
+  flex-direction: column;
+  @include mobile {
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    justify-content: flex-start;
+  }
+  h2 {
+    font-size: 5rem;
+    @include mobile {
+      margin-top: 5rem;
+    }
+  }
+  img {
+    max-width: 25rem;
+    margin: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+}
+
+/*--- KNOWLEDGE ---*/
+.knowledge {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  background: $primary;
+  color: $secondary;
+  &-box {
+    @extend .home-box;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid:
+      "k-img k-content k-title" 1fr
+      / auto 1fr auto;
+    @include mobile {
+      grid:
+        "k-title" auto
+        "k-img" auto
+        "k-content" auto
+        / 1fr;
+    }
+    h2 {
+      grid-area: k-title;
+      @extend .home-title-right;
+    }
+    img {
+      grid-area: k-img;
+    }
+    &-content {
+      height: 100%;
+      grid-area: k-content;
+      display: grid;
+      grid:
+        "k-text" auto
+        "k-languages" 1fr
+        /1fr;
+      &-text {
+        text-align: justify;
+        font-size: 2rem;
+        margin: 3rem;
+        @include mobile {
+          margin: 1rem;
+        }
+      }
+      .languages {
+        text-align: center;
+        h3 {
+          @extend .btn-light;
+          font-size: 3rem;
+          @include mobile {
+            margin-top: 2rem;
+          }
+        }
+        &-loop {
+          margin: 4rem auto;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          @include mobile {
+            grid-template-columns: 1fr 1fr;
+          }
+          gap: 2rem;
+          &-item {
+            img {
+              max-width: 10rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--- PROJECTS ---*/
+.home-projects {
+  width: 100%;
+  height: 100vh;
+  @include mobile {
+    height: auto;
+  }
+  padding: 1rem;
+  &-box {
+    @extend .home-box;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid:
+      "p-title p-content p-img" 1fr
+      / auto 1fr auto;
+    @include mobile {
+      grid:
+        "p-title" auto
+        "p-img" auto
+        "p-content" auto
+        / 1fr;
+    }
+    h2 {
+      grid-area: p-title;
+      @extend .home-title-left;
+      align-self: flex-start;
+    }
+    img {
+      grid-area: p-img;
+    }
+    &-content {
+      @extend .c-flex;
+      width: 100%;
+      flex-direction: column;
+      grid-area: p-content;
+      &-loop {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include mobile {
+          grid-template-columns: 1fr;
+          margin: 4rem;
+        }
+        gap: 2rem;
+        justify-items: center;
+        align-items: center;
+        @include projectBox;
+      }
+      a {
+        margin-top: 5rem;
+        @include mobile {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+/*--- CONTACT ---*/
+.contact {
+  height: calc(100vh - 5rem);
+  @include mobile {
+    height: auto;
+  }
+  padding: 1rem;
+  background: $primary;
+  color: $secondary;
+  &-box {
+    @extend .home-box;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid:
+      "c-img c-content c-title" 1fr
+      / auto 1fr auto;
+    @include mobile {
+      grid:
+        "c-title" auto
+        "c-content" auto
+        "c-img" auto
+        / 1fr;
+    }
+    h2 {
+      @extend .home-title-right;
+      grid-area: c-title;
+    }
+    &-left {
+      grid-area: c-img;
+      @extend .c-flex;
+      flex-direction: column;
+      a i {
+        color: $secondary;
+        font-size: 5rem;
+      }
+      img {
+        margin: 3rem 0;
+      }
+      @include mobile {
+        margin-top: 4rem;
+      }
+    }
+    &-content {
+      grid-area: c-content;
+      @extend .c-flex;
+      justify-self: flex-start;
+      font-size: 2.5rem;
+      font-weight: 300;
+      padding-left: 1rem;
+      @include mobile {
+        padding-left: 0;
+        text-align: justify;
+      }
+    }
+  }
+}
+/*-------------------- LOGIN PAGE --------------------*/
+.login-page {
+  width: 100%;
+  height: 100%;
+  form {
+    max-width: 50rem;
+    margin: auto;
+    p {
+      width: 50%;
+      @include mobile {
+        width: 80%;
+      }
+      margin: 1rem auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      label {
+        text-transform: uppercase;
+      }
+      input[type="text"],
+      input[type="password"] {
+        height: 3.5rem;
+        border: 1px solid $primary;
+        border-radius: $br;
+        padding: 0 1rem;
+      }
+      input[type="submit"] {
+        @extend .btn-dark;
+        border: 0;
+      }
+    }
+  }
+  text-align: center;
+}
+
+/*-------------------- ALL PROJECTS PAGE --------------------*/
+.projects-box {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid:
+    "loop taxonomy" auto
+    / 2fr 1fr;
+  @include mobile {
+    grid:
+      "taxonomy" auto
+      "loop" auto
+      / 1fr;
+  }
+  justify-items: center;
+  &-loop {
+    grid-area: loop;
+    width: 100%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+    @include projectBox;
+  }
+  &-tax {
+    grid-area: taxonomy;
+    align-self: flex-start;
+    &-btn {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style: none;
+      margin-top: 2rem;
+      text-align: center;
+      li {
+        a {
+          font-family: $title;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 2rem;
+          &::before {
+            content: "#";
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-------------------- DEFAULT PAGE --------------------*/
+.post {
+  &-title {
+    text-align: center;
+    h2 {
+      width: auto;
+      display: inline-block;
+      background: $primary;
+      color: $secondary;
+      padding: 4rem;
+      font-size: 4rem;
+      text-transform: uppercase;
+      border-radius: $br;
+      margin-bottom: 2rem;
+    }
+  }
+  &-btn {
+    width: 80%;
+    margin: auto;
+    text-align: right;
+  }
+  &-content {
+    width: 60%;
+    margin: 2rem auto;
+  }
+}
+
+/*-------------------- SINGLE PROJECT --------------------*/
+.single-project {
+  width: 70%;
+  margin: 2rem auto;
+  display: grid;
+  grid:
+    "s-content s-aside" auto
+    / 2fr 1fr;
+  @include mobile {
+    width: 95%;
+    grid:
+      "s-aside" auto
+      "s-content" auto
+      / 1fr;
+  }
+  &-content {
+    grid-area: s-content;
+    text-align: justify;
+    border-right: 1px solid $primary;
+    padding-right: 2rem;
+    margin-right: 2rem;
+    @include mobile {
+      border-right: 0;
+      padding-right: 0;
+      margin-right: 0;
+    }
+    ul {
+      @extend .list;
+    }
+    h3 {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+    }
+    * + h3 {
+      margin-top: 3rem;
+    }
+    h4 {
+      margin-left: 2rem;
+      margin-top: 2rem;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+  &-aside {
+    grid-area: s-aside;
+    text-align: center;
+    img {
+      max-width: 100%;
+      @extend .border;
+      margin-bottom: 2rem;
+    }
+    h4 {
+      @extend .btn-dark;
+    }
+    &-used,
+    &-type {
+      margin: 2rem auto;
+      font-size: 1.8rem;
+    }
+    &-online {
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      a {
+        margin: 1rem;
+      }
+    }
+  }
+}

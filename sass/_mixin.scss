@@ -1,0 +1,17 @@
+@mixin projectBox {
+  .projects-loop-item {
+    width: 80%;
+    a {
+      text-align: center;
+      h3 {
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+      .projects-loop-item-img {
+        width: 100%;
+        height: 17rem;
+        @extend .border;
+      }
+    }
+  }
+}

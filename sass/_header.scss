@@ -1,0 +1,47 @@
+/*-------------------- HEADER --------------------*/
+.header {
+  height: 10rem;
+  @include mobile {
+    height: auto;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  @include mobile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  h1 {
+    a svg {
+      width: 15rem;
+      stroke: $primary;
+      @include mobile {
+        width: 25rem;
+      }
+    }
+  }
+  nav {
+    .menu {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      @include mobile {
+        justify-content: center;
+        margin-bottom: 4rem;
+      }
+      li {
+        margin: 0 5rem;
+        a {
+          font-family: $title;
+          text-transform: lowercase;
+          font-weight: 400;
+          font-size: 2rem;
+          @include mobile {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}

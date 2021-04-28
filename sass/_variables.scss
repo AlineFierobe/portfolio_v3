@@ -1,0 +1,13 @@
+$title: "Yanone Kaffeesatz", sans-serif;
+$text: "Oswald", sans-serif;
+
+$primary: #0c4d61;
+$secondary: #dfdfe3;
+
+$br: 8px;
+
+@mixin mobile {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}

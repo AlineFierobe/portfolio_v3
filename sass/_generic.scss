@@ -1,0 +1,99 @@
+/*--- DESKTOP / MOBILE ---*/
+.desktop {
+  @include mobile {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @include mobile {
+    display: inherit;
+  }
+}
+
+/*--- FLEX ---*/
+.c-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--- AVATAR HOMEPAGE ---*/
+.home-avatar {
+  max-width: 20rem;
+}
+
+/*--- BUTTON ---*/
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  padding-top: 1.5rem;
+  font-family: $title;
+  font-size: 2rem;
+  min-width: 10rem;
+  text-align: center;
+  border-radius: $br;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  &-dark {
+    @extend .btn;
+    background: $primary;
+    color: $secondary;
+  }
+  &-light {
+    @extend .btn;
+    background: $secondary;
+    color: $primary;
+  }
+}
+
+/*--- BORDER ---*/
+.border {
+  border: 2px solid $primary;
+  border-radius: $br;
+}
+
+/*--- FONT AWESOME ICON ---*/
+.fontawesome {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/*--- EMPTY LOOP ---*/
+.empty {
+  font-family: $title;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/*--- UL ---*/
+.list {
+  list-style: none;
+  margin-left: 7rem;
+  li {
+    &::before {
+      content: "\f0da";
+      margin-right: 1rem;
+      @extend .fontawesome;
+      margin-left: -1.7rem;
+    }
+  }
+}
+
+/*--- BLOCKQUOTE ---*/
+blockquote,
+.quote {
+  margin: 1rem;
+  &::before {
+    content: "\f10d";
+    @extend .fontawesome;
+    margin: 1rem;
+  }
+  &::after {
+    content: "\f10e";
+    @extend .fontawesome;
+    margin: 1rem;
+  }
+}
