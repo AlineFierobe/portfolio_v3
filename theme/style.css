@@ -4,7 +4,7 @@ Theme URI: https://alinefierobe.com
 Author: Aline Fierobe
 Author URI: https://alinefierobe.com
 Description: Portfolio Aline Fierobe
-Version: 1.0
+Version: 3.0
 Tags: web, dev, portfolio, custom, theme
 */
 * {
@@ -570,6 +570,11 @@ a {
       margin-left: 2rem;
       margin-top: 2rem;
       font-size: 2.5rem;
+      text-transform: uppercase; }
+    .single-project-content h5 {
+      margin-left: 4rem;
+      margin-top: 2rem;
+      font-size: 2rem;
       text-transform: uppercase; }
   .single-project-aside {
     grid-area: s-aside;
