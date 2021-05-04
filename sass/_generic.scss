@@ -71,13 +71,33 @@
 /*--- UL ---*/
 .list {
   list-style: none;
-  margin-left: 7rem;
+  margin-left: 5rem;
   li {
     &::before {
       content: "\f0da";
       margin-right: 1rem;
       @extend .fontawesome;
       margin-left: -1.7rem;
+    }
+  }
+  ul {
+    margin-left: 3rem;
+    li {
+      &::before {
+        content: "\f105";
+        margin-right: 1rem;
+        @extend .fontawesome;
+      }
+    }
+    ul {
+      margin-left: 3rem;
+      li {
+        &::before {
+          content: "\f30b";
+          margin-right: 1rem;
+          @extend .fontawesome;
+        }
+      }
     }
   }
 }

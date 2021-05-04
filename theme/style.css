@@ -68,7 +68,7 @@ a {
   border-radius: 8px; }
 
 /*--- FONT AWESOME ICON ---*/
-.fontawesome, .list li::before, .single-project-content ul li::before, blockquote::before,
+.fontawesome, .list li::before, .single-project-content ul li::before, .list ul li::before, .list ul ul li::before, .single-project-content ul ul ul li::before, blockquote::before,
 .quote::before, blockquote::after,
 .quote::after {
   font-family: "Font Awesome 5 Free";
@@ -84,11 +84,21 @@ a {
 /*--- UL ---*/
 .list, .single-project-content ul {
   list-style: none;
-  margin-left: 7rem; }
+  margin-left: 5rem; }
   .list li::before, .single-project-content ul li::before {
     content: "\f0da";
     margin-right: 1rem;
     margin-left: -1.7rem; }
+  .list ul, .single-project-content ul ul {
+    margin-left: 3rem; }
+    .list ul li::before, .single-project-content ul ul li::before {
+      content: "\f105";
+      margin-right: 1rem; }
+    .list ul ul, .single-project-content ul ul ul {
+      margin-left: 3rem; }
+      .list ul ul li::before, .single-project-content ul ul ul li::before {
+        content: "\f30b";
+        margin-right: 1rem; }
 
 /*--- BLOCKQUOTE ---*/
 blockquote,

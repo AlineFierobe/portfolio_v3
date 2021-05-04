@@ -632,7 +632,7 @@ if( function_exists('acf_add_local_field_group') ):
             // UPDATE
             array(
                 'key' => 'field_60886380a57f8',
-                'label' => 'Update',
+                'label' => 'More',
                 'name' => 'project_update',
                 'type' => 'medium_editor',
                 'instructions' => '',
